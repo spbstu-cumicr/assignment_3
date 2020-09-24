@@ -25,7 +25,7 @@ static const uint8_t ledColour[] = {
 };
 
 // Таймаут таймера
-const uint32_t timeout_ms = 15;
+const uint32_t timeout_ms = 30;
 
 // Фамилия
 const char *lastName = "Pankov";
