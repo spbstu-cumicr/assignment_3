@@ -8,11 +8,11 @@
 
 // Последовательность загорания светодиодов
 // Укажите последовательность в соответствии с вариантом
-// Используйте макроопределения цветом светодиодов:
-// LED_GREEN — зелёный
+// Используйте именованные константы из перечисления LED_COLOR:
+// LED_GREEN  — зелёный
 // LED_YELLOW — жёлтый
-// LED_RED — красный
-// LED_BLUE — синий
+// LED_RED    — красный
+// LED_BLUE   — синий
 static const uint8_t ledColour[] = {
 	LED_BLUE,
 	LED_GREEN,
@@ -51,7 +51,10 @@ int main(void)
 	initTimer(timeout_ms);
 
 	while(1)
-	{
+	{		
+		// Считаем контрольную сумму
+		checksum = while_Test(decision);
+    
 		// Номер светодиода
 		static uint8_t ledNumber = 0;
 		
@@ -105,9 +108,6 @@ int main(void)
 		
 		// Сбрасываем флаг таймера
 		TIM_ClearFlag(TIM3, TIM_FLAG_Update);
-		
-		// Считаем контрольную сумму
-		checksum = while_Test(decision);
 	}
 	
 	return 0;

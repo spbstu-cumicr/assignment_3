@@ -1,15 +1,17 @@
-#ifndef LED_H
-#define LED_H
+#pragma once
 
 #include "mcu_support_package/inc/stm32f4xx.h"
 #include "stdbool.h"
 
 #define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
 
-#define LED_GREEN    0
-#define LED_YELLOW   1
-#define LED_RED      2
-#define LED_BLUE     3
+enum LED_COLOR
+{
+    LED_GREEN  = 0,
+    LED_YELLOW = 1,
+    LED_RED    = 2,
+    LED_BLUE   = 3
+};
 
 typedef struct Led
 {
@@ -34,5 +36,3 @@ Led *initLed(void);
 void turnOnLed(Led *led);
 void turnOffLed(Led *led);
 bool isLedOn(Led *led);
-
-#endif //LED_H

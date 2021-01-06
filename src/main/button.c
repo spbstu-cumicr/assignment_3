@@ -17,15 +17,15 @@ Button *initButton(void)
 	RCC_AHB1PeriphClockCmd(button.periphPort, ENABLE);
 	
 	// Устанавливаем пин кнопки в режим ввода с подтяжкой к земле с низкой частотой
-	GPIO_InitTypeDef new_button;
-	GPIO_StructInit(&new_button);
+	GPIO_InitTypeDef newButton;
+	GPIO_StructInit(&newButton);
 
-	new_button.GPIO_Pin   = button.gpioPin;
-	new_button.GPIO_Mode  = GPIO_Mode_IN;
-	new_button.GPIO_Speed = GPIO_Low_Speed;
-	new_button.GPIO_PuPd  = GPIO_PuPd_NOPULL;
+	newButton.GPIO_Pin   = button.gpioPin;
+	newButton.GPIO_Mode  = GPIO_Mode_IN;
+	newButton.GPIO_Speed = GPIO_Low_Speed;
+	newButton.GPIO_PuPd  = GPIO_PuPd_NOPULL;
 	
-	GPIO_Init(button.gpioPort, &new_button);
+	GPIO_Init(button.gpioPort, &newButton);
 	
 	return &button;
 }

@@ -55,15 +55,15 @@ Led *initLed(void)
 		RCC_AHB1PeriphClockCmd(led[ledNumber].periphPort, ENABLE);
 		
 		// Устанавливаем пин светодиода в режим вывода c двухтактным каскадом с низкой частотой
-		GPIO_InitTypeDef new_led;
-		GPIO_StructInit(&new_led);
+		GPIO_InitTypeDef newLed;
+		GPIO_StructInit(&newLed);
 
-		new_led.GPIO_Pin   = led[ledNumber].gpioPin;
-		new_led.GPIO_Mode  = GPIO_Mode_OUT;
-		new_led.GPIO_Speed = GPIO_Low_Speed;
-		new_led.GPIO_OType = GPIO_OType_PP;
+		newLed.GPIO_Pin   = led[ledNumber].gpioPin;
+		newLed.GPIO_Mode  = GPIO_Mode_OUT;
+		newLed.GPIO_Speed = GPIO_Low_Speed;
+		newLed.GPIO_OType = GPIO_OType_PP;
 		
-		GPIO_Init(led[ledNumber].gpioPort, &new_led);
+		GPIO_Init(led[ledNumber].gpioPort, &newLed);
 	}
 	
 	return led;
