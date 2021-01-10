@@ -3,47 +3,47 @@
 static Led led[] = 
 {
 	{
+        .turnOn     = turnOnLed,
+		.turnOff    = turnOffLed,
+		.isOn       = isLedOn,
 		.periphPort = RCC_AHB1Periph_GPIOD,
 		.gpioPort   = GPIOD,
 		.gpioPin    = GPIO_Pin_12,
 		.gpioPinSrc = GPIO_PinSource12,
-		.state      = false,
-		.turnOn     = turnOnLed,
-		.turnOff    = turnOffLed,
-		.isOn       = isLedOn
+		.state      = false
 	},
 	
 	{
+        .turnOn     = turnOnLed,
+		.turnOff    = turnOffLed,
+		.isOn       = isLedOn,
 		.periphPort = RCC_AHB1Periph_GPIOD,
 		.gpioPort   = GPIOD,
 		.gpioPin    = GPIO_Pin_13,
 		.gpioPinSrc = GPIO_PinSource13,
-		.state      = false,
-		.turnOn     = turnOnLed,
-		.turnOff    = turnOffLed,
-		.isOn       = isLedOn
+		.state      = false
 	},
 	
 	{
+        .turnOn     = turnOnLed,
+        .turnOff    = turnOffLed,
+        .isOn       = isLedOn,
 		.periphPort = RCC_AHB1Periph_GPIOD,
 		.gpioPort   = GPIOD,
 		.gpioPin    = GPIO_Pin_14,
 		.gpioPinSrc = GPIO_PinSource14,
-		.state      = false,
-		.turnOn     = turnOnLed,
-		.turnOff    = turnOffLed,
-		.isOn       = isLedOn
+		.state      = false
 	},
 	
 	{
+        .turnOn     = turnOnLed,
+		.turnOff    = turnOffLed,
+		.isOn       = isLedOn,
 		.periphPort = RCC_AHB1Periph_GPIOD,
 		.gpioPort   = GPIOD,
 		.gpioPin    = GPIO_Pin_15,
 		.gpioPinSrc = GPIO_PinSource15,
-		.state      = false,
-		.turnOn     = turnOnLed,
-		.turnOff    = turnOffLed,
-		.isOn       = isLedOn
+		.state      = false
 	},
 };
 

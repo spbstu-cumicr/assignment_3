@@ -48,14 +48,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\Objects\</OutputDirectory>
+          <OutputDirectory>.\obj\</OutputDirectory>
           <OutputName>test</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\Listings\</ListingPath>
+          <ListingPath>.\lst\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -402,9 +402,19 @@
               <FilePath>.\src\main\button.c</FilePath>
             </File>
             <File>
-              <FileName>Lab3_Test.lib</FileName>
+              <FileName>variants.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\main\variants.c</FilePath>
+            </File>
+            <File>
+              <FileName>lab_3_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\main\lab_3_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>lab_3_test.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>.\src\main\Lab3_Test.lib</FilePath>
+              <FilePath>.\src\main\lab_3_test.lib</FilePath>
             </File>
           </Files>
         </Group>

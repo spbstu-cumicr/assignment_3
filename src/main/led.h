@@ -5,16 +5,23 @@
 
 #define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
 
-enum LED_COLOR
+enum LED_COLOUR
 {
-    LED_GREEN  = 0,
-    LED_YELLOW = 1,
-    LED_RED    = 2,
-    LED_BLUE   = 3
+    GREEN   = 0,
+    YELLOW  = 1,
+    RED     = 2,
+    BLUE    = 3,
+    COLOURS = 4
 };
 
 typedef struct Led
 {
+/*
+public:
+*/	
+	void (*turnOn)(struct Led *led);
+	void (*turnOff)(struct Led *led);
+	bool (*isOn)(struct Led *led);
 /*
 private:
 */
@@ -23,12 +30,6 @@ private:
 	uint16_t gpioPin;
 	uint16_t gpioPinSrc;
 	bool state;
-/*
-public:
-*/	
-	void (*turnOn)(struct Led *led);
-	void (*turnOff)(struct Led *led);
-	bool (*isOn)(struct Led *led);
 } Led;
 
 Led *initLed(void);

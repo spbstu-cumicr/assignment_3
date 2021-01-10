@@ -2,13 +2,12 @@
 
 static Button button = 
 {
+	.isPressed  = isButtonPressed,
+	.setPressed = setButtonPressed,
 	.periphPort = RCC_AHB1Periph_GPIOA,
 	.gpioPort   = GPIOA,
 	.gpioPin    = GPIO_Pin_0,
-	.gpioPinSrc = GPIO_PinSource0,
 	.state      = false,
-	.isPressed  = isButtonPressed,
-	.setPressed = setButtonPressed
 };
 
 Button *initButton(void)

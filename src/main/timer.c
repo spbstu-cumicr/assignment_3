@@ -4,7 +4,7 @@ void initTimer(const uint32_t timeout_ms)
 {
 	// Вычисляем предделитель и период таймера в тактах
 	uint16_t prescaler = SystemCoreClock / 2 / REFERENCE_FREQUENCY_HZ - 1;
-	uint16_t period = REFERENCE_FREQUENCY_HZ * timeout_ms / 1000 - 1;
+	uint32_t period = REFERENCE_FREQUENCY_HZ * timeout_ms / 1000 - 1;
 	
 	// Подаём питание на порт таймера общего назначения TIM3
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);

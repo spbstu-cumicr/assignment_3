@@ -6,18 +6,17 @@
 typedef struct Button 
 {
 /*
+public:
+*/
+	bool (*isPressed)(struct Button *button);
+	void (*setPressed)(struct Button *button, const bool isPressed);
+/*
 private:
 */
 	uint32_t periphPort;
 	GPIO_TypeDef *gpioPort;
 	uint16_t gpioPin;
-	uint16_t gpioPinSrc;
 	bool state;
-/*
-public:
-*/
-	bool (*isPressed)(struct Button *button);
-	void (*setPressed)(struct Button *button, const bool isPressed);
 } Button;
 
 Button *initButton(void);
